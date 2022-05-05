@@ -1,0 +1,38 @@
+html,body{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+#main-doc{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* Section for styling navbar */
+#navbar{
+    width: 30%;
+    position: fixed;
+}
+
+
+/* Section for styling content */
+#content-wrapper{
+    width: 70%;
+    direction: rtl;
+
+}
+
+ul>li{
+    text-decoration: none;
+}
+
+/* 
+.divider{
+    width: 10px;
+    height: 100%;
+    padding-left: 10px;
+    background-color: silver;
+} */
