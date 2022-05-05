@@ -12,7 +12,7 @@
     <h1>Solved Problems</h1>
       <main id="main-doc">
         <nav id="navbar">
-          <h1>Choose One Problem</h1>
+          <header>Choose One Problem</header>
           <a href="#BalancedSums" class="nav-link">BalancedSums</a>
           <a href="#BeautifulDays" class="nav-link">BeautifulDays</a>
           <a href="#BirthdayCakeCandles" class="nav-link">BirthdayCakeCandles</a>
@@ -23,8 +23,21 @@
         <div class="divider"></div>
         <div id="content-wrapper">
           <section class="main-section" id="BalancedSums">
-            <h2>BalancedSums</h2>
-            <p></p>
+            <header>BalancedSums</header>
+            <p>  function balancedSums(arr) {
+              //https://www.hackerrank.com/challenges/sherlock-and-array/problem
+                let sum = arr.reduce((acc,val) => acc+val)
+                let leftSum=0
+                for (let i=0 ; i < arr.length ; i++){
+                  sum -= arr[i]
+                  if (sum ===leftSum){
+                    return "YES"
+                  }//end if
+                  leftSum += arr[i]
+                }//end for
+                return "NO"
+              //console.log(balancedSums([3,2,1,6,5,4,9,3,2]))
+              }</p>
             <p></p>
 
             <code></code>
@@ -33,8 +46,23 @@
             </ul>
           </section>
           <section class="main-section" id="BeautifulDays">
-            <h2>BeautifulDays</h2>
-            <p></p>
+            <header>BeautifulDays</header>
+            <p>  function beautifulDays(i, j, k) {
+              //https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem
+              let arrFor=''
+              let arrRev=''
+              let a=0
+              let b=0
+              let result=0
+              for (let p=i;p<=j;p++){
+                  arrFor = [...p.toString()]
+                  arrRev = arrFor.reverse()
+                  a = parseInt(arrRev.join(''))
+                  b=Math.abs(a-p)
+                  result += b%k==0?1:0;
+              }//end for
+              return result
+            }</p>
             <p></p>
 
             <code></code>
@@ -44,8 +72,25 @@
 
           </section>
           <section class="main-section" id="BirthdayCakeCandles">
-            <h2>BirthdayCakeCandles</h2>
-            <p></p>
+            <header>BirthdayCakeCandles</header>
+            <p>  function birthdayCakeCandles(candles) {
+              let tallest=candles[0]
+              let count=1
+              let i=1
+              while(i<candles.length){
+              if(candles[i]<tallest){
+              i++
+              } else if(candles[i]>tallest){
+              tallest=candles[i]
+              i++
+              } else if(candles[i]==tallest){
+              count++
+              i++
+              }//end else
+              }//end while
+              console.log(count)
+              //birthdayCakeCandles([3,2,3,1,2,3,3,2,1])
+              }</p>
             <p></p>
 
             <code></code>
@@ -54,8 +99,29 @@
             </ul>
           </section>
           <section class="main-section" id="BonAppetit">
-            <h2>BonAppetit</h2>
-            <p></p>
+            <header>BonAppetit</header>
+            <p>  function bonAppetit(bill,k, b) {
+              //https://www.hackerrank.com/challenges/bon-appetit/problem
+                let totalShared=0
+                let x=bill.length
+                let i=0
+                while(i<x){
+                  if(i!=k){
+                      totalShared += bill[0]
+                      bill.shift()
+                      i++
+                  } else {
+                      bill.shift()
+                      i++
+                  }//end else
+                }//end while
+                if(totalShared/2 === b){
+                  console.log("Bon Appetit")
+                } else {
+                  console.log((b - totalShared/2))
+                }//end else
+              //console.log(bonAppetit([3,10,2,9],1,12))
+              }</p>
             <p></p>
 
             <code></code>
@@ -64,8 +130,30 @@
             </ul>
           </section>
           <section class="main-section" id="BreakingRecords">
-            <h2>BreakingRecords</h2>
-            <p></p>
+            <header>BreakingRecords</header>
+            <p>  function breakingRecords(scores) {
+              let highest=scores[0]
+              let lowest=scores[0]
+              let Lcount=0
+              let Hcount=0
+              let i=1
+              while(i<scores.length){
+              if(lowest<=scores[i] && scores[i]<=highest){
+              i++
+              } else if(scores[i]>highest){
+              highest=scores[i]
+              Hcount++
+              i++
+              } else if(scores[i]<lowest){
+              lowest=scores[i]
+              Lcount++
+              i++
+              }//end else
+              }//end while
+              console.log([Hcount,Lcount])
+              return ([Hcount,Lcount])
+              //breakingRecords([3,2,5,4,6])
+              }</p>
             <p></p>
 
             <code></code>

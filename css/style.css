@@ -20,13 +20,17 @@ html,body{
 
 /* Section for styling content */
 #content-wrapper{
-    width: 70%;
-    direction: rtl;
-
+    width: 50%;
+    direction: ltr;
+    display: flex;
+    justify-content: center;
 }
 
 ul>li{
-    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
 }
 
 /* 
