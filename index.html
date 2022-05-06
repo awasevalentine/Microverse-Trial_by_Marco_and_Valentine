@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Valentine Marco Technical Documentation Page</title>
     <link rel="stylesheet" href="css/style.css">
@@ -9,26 +10,29 @@
   </head>
 
   <body>
-    <h1>Solved Problems</h1>
       <main id="main-doc">
-        <nav id="navbar">
-          <header>Choose One Problem</header>
-          <a href="#BalancedSums" class="nav-link">BalancedSums</a>
-          <a href="#BeautifulDays" class="nav-link">BeautifulDays</a>
-          <a href="#BirthdayCakeCandles" class="nav-link">BirthdayCakeCandles</a>
-          <a href="#BonAppetit" class="nav-link">BonAppetit</a>
-          <a href="#BreakingRecords" class="nav-link">BreakingRecords</a>
-
-        </nav>
+        <div class="navba">
+        <h1>Solved Problems</h1>
+          <nav id="navbar">
+            <header>Choose One Problem</header>
+            <a href="#BalancedSums" class="nav-link">BalancedSums</a>
+            <a href="#BeautifulDays" class="nav-link">BeautifulDays</a>
+            <a href="#BirthdayCakeCandles" class="nav-link">BirthdayCakeCandles</a>
+            <a href="#BonAppetit" class="nav-link">BonAppetit</a>
+            <a href="#BreakingRecords" class="nav-link">BreakingRecords</a>
+  
+          </nav>
+        </div>
         <div class="divider"></div>
         <div id="content-wrapper">
           <section class="main-section" id="BalancedSums">
             <header>BalancedSums</header>
-            <p>  function balancedSums(arr) {
+            
+            <p>  {{function balancedSums(arr) {
               //https://www.hackerrank.com/challenges/sherlock-and-array/problem
                 let sum = arr.reduce((acc,val) => acc+val)
                 let leftSum=0
-                for (let i=0 ; i < arr.length ; i++){
+                for (let i=0 ; i  arr.length ; i++){
                   sum -= arr[i]
                   if (sum ===leftSum){
                     return "YES"
@@ -54,7 +58,7 @@
               let a=0
               let b=0
               let result=0
-              for (let p=i;p<=j;p++){
+              for (let p=i;p =j;p++){
                   arrFor = [...p.toString()]
                   arrRev = arrFor.reverse()
                   a = parseInt(arrRev.join(''))
@@ -62,7 +66,7 @@
                   result += b%k==0?1:0;
               }//end for
               return result
-            }</p>
+            }}</p>
             <p></p>
 
             <code></code>
@@ -73,12 +77,12 @@
           </section>
           <section class="main-section" id="BirthdayCakeCandles">
             <header>BirthdayCakeCandles</header>
-            <p>  function birthdayCakeCandles(candles) {
+            <p>  {{function birthdayCakeCandles(candles) {
               let tallest=candles[0]
               let count=1
               let i=1
               while(i<candles.length){
-              if(candles[i]<tallest){
+              if(candles[i]
               i++
               } else if(candles[i]>tallest){
               tallest=candles[i]
@@ -90,7 +94,7 @@
               }//end while
               console.log(count)
               //birthdayCakeCandles([3,2,3,1,2,3,3,2,1])
-              }</p>
+              }}</p>
             <p></p>
 
             <code></code>
@@ -100,28 +104,7 @@
           </section>
           <section class="main-section" id="BonAppetit">
             <header>BonAppetit</header>
-            <p>  function bonAppetit(bill,k, b) {
-              //https://www.hackerrank.com/challenges/bon-appetit/problem
-                let totalShared=0
-                let x=bill.length
-                let i=0
-                while(i<x){
-                  if(i!=k){
-                      totalShared += bill[0]
-                      bill.shift()
-                      i++
-                  } else {
-                      bill.shift()
-                      i++
-                  }//end else
-                }//end while
-                if(totalShared/2 === b){
-                  console.log("Bon Appetit")
-                } else {
-                  console.log((b - totalShared/2))
-                }//end else
-              //console.log(bonAppetit([3,10,2,9],1,12))
-              }</p>
+            <p>Hello World</p>
             <p></p>
 
             <code></code>
@@ -167,7 +150,7 @@
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <script  src="js/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
   </body>
 </html>
 

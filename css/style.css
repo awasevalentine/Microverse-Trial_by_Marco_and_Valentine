@@ -5,7 +5,7 @@ html,body{
 
 #main-doc{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     width: 100vw;
     height: 100vh;
 }
@@ -13,17 +13,40 @@ html,body{
 
 /* Section for styling navbar */
 #navbar{
+    width: 100%;
+    float: left;
+    display: inline-block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* margin-top: 20px; */
+    /* margin: 50px 0px 50px 40px; */
+
+}
+.navba{
     width: 30%;
+    height: 100vh;
+    background-color: #7FB5FF;
     position: fixed;
+    overflow-y: scroll;
 }
 
+#navbar > a{
+    margin: 70px 0 80px 0;
+    border-top: 1px solid black;
+}
 
 /* Section for styling content */
 #content-wrapper{
-    width: 50%;
-    direction: ltr;
-    display: flex;
-    justify-content: center;
+    width: 60%;
+    display: inline-block;
+    position: relative;
+    left: 30%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: end;
+    justify-items: center;
+    text-align: center;
+    float: right;
 }
 
 ul>li{
@@ -33,10 +56,53 @@ ul>li{
 
 }
 
-/* 
+header{
+    font-size: 20px;
+    font-weight: 600;
+    color: #FF7700;
+    margin: 20px;
+}
+
+h1 {
+    padding-top: 30px;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
 .divider{
-    width: 10px;
+    width: 5px;
     height: 100%;
-    padding-left: 10px;
-    background-color: silver;
-} */
+    padding-left: 5px;
+    background-color: black;
+} 
+
+.main-section{
+    margin-top: 100px;
+}
+
+
+/* Adding media query that will hide the sidebar when the viewport is small */
+
+@media only screen and (max-width: 600px) {
+    .navba{
+        display: none;
+    }
+
+
+    /* Section for styling content */
+#content-wrapper{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    margin: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: end;
+    justify-items: center;
+    text-align: center;
+}
+
+    
+    
+}
